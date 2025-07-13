@@ -1,7 +1,0 @@
-streamlit
-pandas
-numpy
-joblib
-scikit-learn # Agar model scikit-learn se train kiya hai
-plotly # Agar aap plotly use kar rahe hain visualization ke liye
-seaborn # Agar aap seaborn use kar rahe hain visualization ke liye
