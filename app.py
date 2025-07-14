@@ -31,8 +31,9 @@ if model is not None:
         type_numeric = type_mapping[transaction_type]
 
         # Prepare features for prediction
-        features = np.array([[type_numeric, amount, old_balance_orig, new_balance_orig]])
-
+        features = np.array([[type_mapping[transaction_type], amount, old_balance_orig,
+                      new_balance_orig, old_balance_dest, new_balance_dest]])
+       
         # Make prediction
         prediction = model.predict(features)
 
