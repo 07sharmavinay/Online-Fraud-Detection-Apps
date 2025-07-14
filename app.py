@@ -22,10 +22,10 @@ if model is not None:
     # Create input fields for features
     transaction_type = st.selectbox("Transaction Type", list(type_mapping.keys()))
     amount = st.number_input("Amount", min_value=0.0, format="%.2f")
-    old_balance_orig = st.number_input("Old Balance Originator", min_value=0.0, format="%.2f")
-    new_balance_orig = st.number_input("New Balance Originator", min_value=0.0, format="%.2f")
-
-    # Prediction button
+    old_balance_dest = st.number_input("Old Balance Destination", min_value=0.0, format="%.2f")
+    new_balance_dest = st.number_input("New Balance Destination", min_value=0.0, format="%.2f")
+    
+   # Prediction button
     if st.button("Predict"):
         # Convert transaction type to numerical
         type_numeric = type_mapping[transaction_type]
